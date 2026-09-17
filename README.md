@@ -81,7 +81,7 @@ NormalizedReferenceCode/
 ```
 
 - `NormalizedGeneratedCode/{MODELO}/{QUESTAO}/Participant_{N}/` — código normalizado gerado por cada LLM, para cada questão e participante (saída do [GeneratedCodeByAI](https://github.com/IngridBatista/GeneratedCodeByAI) já processada por esta API).
-- `NormalizedReferenceCode/{QUESTAO}/` — código normalizado da solução de referência (especialista) de cada uma das 3 questões, usado como base de comparação para todos os modelos e participante [GeneratedCodeBySpecialist](https://github.com/reginaldomota/code-metrics).
+- `NormalizedReferenceCode/{QUESTAO}/` — código normalizado da solução de referência (especialista) de cada uma das 3 questões, usado como base de comparação para todos os modelos e participante ([GeneratedCodeBySpecialist](https://github.com/reginaldomota/code-metrics)).
 
 > `CLAUDE/SequenceComparison` e `DEEPSEEK/SequenceComparison` não possuem a pasta `Participant_3`: a geração de código para esse par não produziu uma solução compilável, por isso não há CodeBLEU calculado para essas duas combinações (ver tabela de resultados).
 
