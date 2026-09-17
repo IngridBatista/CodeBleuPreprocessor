@@ -1,0 +1,1 @@
+public class DeepseekArrayDifferenceSeniorParticipant3{ public static int[] Difference(int[] a, int[] b) {  HashSet<int> setB = new HashSet<int>(b);  List<int> result = new List<int>();  foreach (int num in a)  {   if (!setB.Contains(num))   {    result.Add(num);   }  }  return result.ToArray(); }}

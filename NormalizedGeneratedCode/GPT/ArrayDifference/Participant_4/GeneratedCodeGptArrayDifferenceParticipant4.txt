@@ -1,0 +1,1 @@
+public static class ArrayUtils{ public static int[] Difference(int[] a, int[] b) {  var setB = b.ToHashSet();  return a.Where(x => !setB.Contains(x)).ToArray(); }}

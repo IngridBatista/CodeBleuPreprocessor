@@ -1,0 +1,1 @@
+public static class ArrayUtils{ public static int[] Difference(int[] a, int[] b) {  var setB = new HashSet<int>(b);  var result = new List<int>(a.Length);  foreach (var item in a)  {   if (!setB.Contains(item))   {    result.Add(item);   }  }  return result.ToArray(); }}

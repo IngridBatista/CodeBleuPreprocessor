@@ -1,0 +1,1 @@
+public class ArrayOperations{ public static int[] Difference(int[] a, int[] b) {  return a.Except(b).ToArray(); }}

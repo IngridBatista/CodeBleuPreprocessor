@@ -1,0 +1,1 @@
+public class ClaudeArrayDifferenceSeniorParticipant5{ public static int[] Difference(int[] a, int[] b) {  var elementsInB = new HashSet<int>(b);  var result = new List<int>();  foreach (var element in a)  {   if (!elementsInB.Contains(element))   {    result.Add(element);   }  }  return result.ToArray(); }}

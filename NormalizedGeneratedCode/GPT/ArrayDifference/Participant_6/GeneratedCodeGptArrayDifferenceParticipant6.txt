@@ -1,0 +1,1 @@
+public class GptArrayDifferencePlenoParticipant6{ public static int[] Diferenca(int[] a, int[] b) {  var conjuntoB = new HashSet<int>(b);  var resultado = new List<int>();  foreach (var x in a)  {   if (!conjuntoB.Contains(x))   {    resultado.Add(x);   }  }  return resultado.ToArray(); }}

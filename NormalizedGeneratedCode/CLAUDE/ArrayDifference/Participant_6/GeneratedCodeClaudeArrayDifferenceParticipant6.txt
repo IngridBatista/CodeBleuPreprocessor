@@ -1,0 +1,1 @@
+public class ClaudeArrayDifferencePlenoParticipant6{ public static int[] ArrayDiff(int[] a, int[] b) {  HashSet<int> setB = new HashSet<int>(b);  List<int> resultado = new List<int>();  foreach (int elemento in a)  {   if (!setB.Contains(elemento))   {    resultado.Add(elemento);   }  }  return resultado.ToArray(); }}
