@@ -81,7 +81,7 @@ NormalizedReferenceCode/
 ```
 
 - `NormalizedGeneratedCode/{MODELO}/{QUESTAO}/Participant_{N}/` — código normalizado gerado por cada LLM, para cada questão e participante (saída do [GeneratedCodeByAI](https://github.com/IngridBatista/GeneratedCodeByAI) já processada por esta API).
-- `NormalizedReferenceCode/{QUESTAO}/` — código normalizado da solução de referência (especialista) de cada uma das 3 questões, usado como base de comparação para todos os modelos e participante ([GeneratedCodeBySpecialist]https://github.com/reginaldomota/code-metrics).
+- `NormalizedReferenceCode/{QUESTAO}/` — código normalizado da solução de referência (especialista) de cada uma das 3 questões, usado como base de comparação para todos os modelos e participante [GeneratedCodeBySpecialist](https://github.com/reginaldomota/code-metrics).
 
 > `CLAUDE/SequenceComparison` e `DEEPSEEK/SequenceComparison` não possuem a pasta `Participant_3`: a geração de código para esse par não produziu uma solução compilável, por isso não há CodeBLEU calculado para essas duas combinações (ver tabela de resultados).
 
@@ -116,7 +116,7 @@ O script usa a biblioteca [`codebleu`](https://pypi.org/project/codebleu/) para 
 
 ### Passo a passo de execução
 
-O script **não recebe parâmetros por linha de comando** — os caminhos do arquivo de referência (`ref_path`) e do arquivo gerado a ser comparado (`hyp_path`) estão fixos diretamente no código-fonte. Isso significa que, para cada execução, é necessário editar manualmente essas duas linhas antes de rodar o script:
+O script **não recebe parâmetros por linha de comando**, os caminhos do arquivo de referência (`ref_path`) e do arquivo gerado a ser comparado (`hyp_path`) estão fixos diretamente no código-fonte. Isso significa que, para cada execução, é necessário editar manualmente essas duas linhas antes de rodar o script:
 
 ```python
 ref_path = base_dir / "NormalizedReferenceCode" / "ArrayDifference" / "ReferenceCodeArrayDifference.txt"
